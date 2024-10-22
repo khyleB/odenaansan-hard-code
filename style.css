@@ -1,7 +1,19 @@
+/* Font Families:
+    font-family: "Raleway", sans-serif; (Logo, text)
+    font-family: "Oswald", sans-serif; (Headings)
+    font-family: "Atkinson Hyperlegible", sans-serif; (Menu, Subheadings)
+    font-family: "Federo", sans-serif; (Potential 'decorative' elements)
+
+*/
+
 * {
     margin: none;
     padding: none;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
