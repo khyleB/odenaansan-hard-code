@@ -1,0 +1,236 @@
+/* Font Families:
+    font-family: "Raleway", sans-serif; (Logo, text)
+    font-family: "Oswald", sans-serif; (Headings)
+    font-family: "Atkinson Hyperlegible", sans-serif; (Menu, Subheadings)
+    font-family: "Federo", sans-serif; (Potential 'decorative' elements)
+
+*/
+
+/*Variables*/
+
+$ode-white: #F4EFE9;
+$ode-black: #131414;
+$ode-brown: #3E3431;
+$ode-orange: #C3643A;
+$ode-green: #8AA05B;
+$ode-yellow: #FED566;
+$transparent-bg: #f4efe987;
+
+$logo-red: #CE0710;
+$logo-yellow: #FAD500;
+
+/*Root CSS*/
+
+* {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $ode-white;
+    font-family: "Raleway", sans-serif;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+h1 {
+	font-family: "Oswald", sans-serif;
+	font-size: 4rem;
+	color: $ode-white;
+}
+
+h2 {
+	font-family: "Oswald", sans-serif;
+	font-size: 2rem;
+	color: $ode-brown;
+}
+
+p {
+	font-size: 1rem;
+	color: $ode-brown;
+}
+
+hr {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	line-height: 50%;
+	size: 1px;
+	border-top: 1px solid $ode-green;
+	width: 50%;
+}
+
+/*----------------------------- Nav & Footer Classes -----------------------------*/
+
+.banner {
+    width: 100%;
+    height: 7rem;
+    color: $ode-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    margin-left: 3rem;
+}
+
+.nav-logo img {
+    height: 4rem;
+    width: auto;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    margin-right: 3rem;
+}
+
+.nav-items ul li {
+    list-style: none;
+    display: inline-block;
+    margin: .5rem;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color:$ode-white;
+}
+
+.nav-items input {
+    height: 2rem;
+    padding: 1rem;
+    border: 0px;
+    border-radius: 25px;
+    background-color: $transparent-bg;
+}
+
+footer {
+    width: 100%;
+    height: 4rem;
+    color: $ode-white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3d3330;
+}
+
+.landing-footer {
+    width: 100%;
+    height: 4rem;
+    color: $ode-white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $ode-brown;
+}
+
+/*----------------------------- Container Classes -----------------------------*/
+
+.full-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+    background: rgba(29, 40, 9, 0.5);
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.triple-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 60%;
+    width: 25%;
+    border: 0px;
+    border-radius: 25px;
+    background-color: $transparent-bg;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+/*----------------------------- Video CSS -----------------------------*/
+
+#landing-video {
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: cover;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*---------- Landing Transitions ----------*/ 
+
+  
+  .triple-container {
+      position: relative;
+      display: inline-block;
+      bottom: -100px;
+      opacity: 0;
+      z-index: 11;
+  }
+  
+  .triple-container.active {
+      bottom: 0;
+      opacity: 1;
+      transition: ease-out 0.5s;
+  }
+  
+  .triple-container.fade {
+      bottom: 150px;
+      opacity: 0;
+      transition: ease-out 0.5s;
+  }
