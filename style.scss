@@ -6,7 +6,7 @@
 
 */
 
-/*Variables*/
+/*---------- Variables ----------*/ 
 
 $ode-white: #F4EFE9;
 $ode-black: #131414;
@@ -18,6 +18,19 @@ $transparent-bg: #f4efe987;
 
 $logo-red: #CE0710;
 $logo-yellow: #FAD500;
+
+$logo-text: "Raleway", sans-serif;
+$headings: "Oswald", sans-serif;
+$subheadings: "Atkinson Hyperlegible", sans-serif;
+$decorative: "Federo", sans-serif;
+
+/*----------------------------- Filler Divs -----------------------------*/
+
+.vr {
+    width: 1px;
+    background-color: $ode-white;
+    height: 80%;
+}
 
 /*Root CSS*/
 
@@ -33,7 +46,7 @@ a {
 
 body {
     background-color: $ode-white;
-    font-family: "Raleway", sans-serif;
+    font-family: $logo-text;
 	margin: 0;
 	align-items: center;
 	justify-content: center;
@@ -41,13 +54,13 @@ body {
 }
 
 h1 {
-	font-family: "Oswald", sans-serif;
+	font-family: $headings;
 	font-size: 4rem;
 	color: $ode-white;
 }
 
 h2 {
-	font-family: "Oswald", sans-serif;
+	font-family: $subheadings;
 	font-size: 2rem;
 	color: $ode-brown;
 }
@@ -55,6 +68,14 @@ h2 {
 p {
 	font-size: 1rem;
 	color: $ode-brown;
+}
+
+input {
+    height: 2rem;
+    padding: 1rem;
+    border: 0px;
+    border-radius: 25px;
+    background-color: $transparent-bg;
 }
 
 hr {
@@ -65,6 +86,10 @@ hr {
 	size: 1px;
 	border-top: 1px solid $ode-green;
 	width: 50%;
+}
+
+ul li {
+    list-style: none;
 }
 
 /*----------------------------- Nav & Footer Classes -----------------------------*/
@@ -106,10 +131,9 @@ nav {
 }
 
 .nav-items ul li {
-    list-style: none;
     display: inline-block;
     margin: .5rem;
-    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-family: $subheadings;
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -119,25 +143,50 @@ nav {
     color:$ode-white;
 }
 
-.nav-items input {
-    height: 2rem;
-    padding: 1rem;
-    border: 0px;
-    border-radius: 25px;
-    background-color: $transparent-bg;
-}
+/*----------------------------- Footer -----------------------------*/
 
 footer {
+    bottom: 0;
+    position: relative;
     width: 100%;
-    height: 4rem;
+    height: 9rem;
     color: $ode-white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
     justify-content: space-between;
-    background-color: #3d3330;
+    background-color: $ode-black;
+}
+
+.footer-main {
+    width: 100%;
+    height: 80%;
+    background-color: $ode-brown;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+
+.footer-search {
+    width:33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .landing-footer {
@@ -198,19 +247,6 @@ footer {
     height: 100%;
     overflow: cover;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   /*---------- Landing Transitions ----------*/ 
 
